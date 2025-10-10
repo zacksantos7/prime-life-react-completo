@@ -1,11 +1,12 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { MessageCircle } from 'lucide-react';
+import LogoBranca from '../assets/img/logo-branca.png'; // Importando a imagem
 
 const Footer = () => {
   const openWhatsApp = () => {
-    const message = "Olá! Gostaria de saber mais sobre como me tornar um associado ou empresa parceira da Prime Life.";
-    const whatsappUrl = `https://wa.me/5511999999999?text=${encodeURIComponent(message)}`;
+    const message = "Olá! Venho do site da Prime Life! Gostaria de mais informações.";
+    const whatsappUrl = `https://wa.me/5531990623159?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
   };
 
@@ -31,10 +32,8 @@ const Footer = () => {
 
         <div className="mt-12 pt-8 border-t border-pink-400">
           <div className="text-center">
-            <div className="flex items-center justify-center mb-4">
-              <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center mr-3">
-                <span className="text-pink-600 font-bold text-lg">P</span>
-              </div>
+            <div className="flex flex-col items-center justify-center mb-4">
+              <img src={LogoBranca} alt="Logo Prime Life" className="w-12 h-12 mb-2" />
               <span className="text-white font-bold text-xl">Prime Life</span>
             </div>
             <p className="text-pink-100 text-sm">
