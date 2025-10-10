@@ -23,16 +23,21 @@ const ContactSection = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    
-    const message = `Olá! Gostaria de mais informações sobre a Prime Life.
-    
-Nome: ${formData.name}
-Celular: ${formData.phone}
-Descrição: ${formData.description}`;
-    
-    const whatsappUrl = `https://wa.me/5511999999999?text=${encodeURIComponent(message)}`;
+
+    // mensagem formatada para WhatsApp
+    const message = `Olá! Venho do site da Prime Life 👋
+
+Gostaria de mais informações.
+
+📋 Nome: ${formData.name}
+📱 Celular: ${formData.phone}
+📝 Descrição: ${formData.description}`;
+
+    // número oficial da Prime Life (com DDI)
+    const whatsappUrl = `https://wa.me/5531990623159?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
-    
+
+    // limpa os campos
     setFormData({
       name: '',
       phone: '',
@@ -95,7 +100,7 @@ Descrição: ${formData.description}`;
                       onChange={handleInputChange}
                       required
                       className="mt-2 border-gray-300 focus:border-pink-500 focus:ring-pink-500"
-                      placeholder="(11) 99999-9999"
+                      placeholder="(31) 9 9062-3159"
                     />
                   </div>
 
@@ -119,7 +124,7 @@ Descrição: ${formData.description}`;
                       type="submit"
                       className="bg-pink-600 hover:bg-pink-700 text-white px-8 py-3 rounded-full text-lg font-medium transition-all duration-300 transform hover:scale-105"
                     >
-                      Enviar
+                      Enviar pelo WhatsApp
                     </Button>
                   </div>
                 </form>
