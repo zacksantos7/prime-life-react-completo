@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
+import logocolorida from '../assets/img/logo-colorida.png';
 
 const Header = () => {
   const scrollToSection = (sectionId) => {
@@ -15,8 +16,8 @@ const Header = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center">
-            <div className="w-10 h-10 bg-gradient-to-br from-pink-500 to-pink-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-xl">P</span>
+            <div className="w-10 h-10 rounded-lg flex items-center justify-center">
+              <img src={logocolorida} alt="Logo" className="w-full h-full object-contain" />
             </div>
           </div>
 
@@ -67,7 +68,7 @@ const Header = () => {
               </svg>
             </Button>
           </div>
-        </div>
+        </div> 
       </div>
     </header>
   );
