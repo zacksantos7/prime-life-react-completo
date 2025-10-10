@@ -18,7 +18,7 @@ const PartnersSection = () => {
       description: 'Clínica especializada em medicina preventiva e diagnóstica',
       logo: clinicaSaudeAlterosa,
       details: {
-        address: 'Rua das Flores, 123 - São Paulo, SP',
+        address: 'Av. Campos de Ourique, 1216 - Jardim Alterosa, Betim',
         phone: '(11) 3456-7890',
         services: ['Consultas médicas', 'Exames preventivos', 'Check-up completo', 'Medicina do trabalho'],
         discount: '20% de desconto em consultas'
@@ -30,20 +30,20 @@ const PartnersSection = () => {
       description: 'Centro de diagnóstico por imagem com tecnologia avançada',
       logo: clinicaCdi,
       details: {
-        address: 'Av. Paulista, 456 - São Paulo, SP',
-        phone: '(11) 2345-6789',
+        address: 'Av. Gov. Valadares, 602 - Centro, Betim - MG',
+        phone: '(31) 3389-5777',
         services: ['Ressonância magnética', 'Tomografia', 'Ultrassom', 'Raio-X digital'],
         discount: '15% de desconto em exames de imagem'
       }
     },
     {
       id: 3,
-      name: 'Dr. Ronaldo Caran',
+      name: 'Dr. Reinaldo Couto',
       description: 'Cardiologia Interativa',
       logo: clinicaReinaldo,
       details: {
-        address: 'Rua do Coração, 789 - São Paulo, SP',
-        phone: '(11) 1234-5678',
+        address: 'Edifício Mandela - R. Prof. Alberto Pacheco, 125 - 505 - Santa Clar, Viçosa - MG',
+        phone: '(31) 99965-4848',
         services: ['Consulta cardiológica', 'Eletrocardiograma', 'Ecocardiograma', 'Teste ergométrico'],
         discount: '25% de desconto em consultas cardiológicas'
       }
@@ -53,21 +53,30 @@ const PartnersSection = () => {
   const additionalPartners = [
     {
       id: 4,
-      name: 'Laboratório Excellence',
-      description: 'Exames laboratoriais com precisão e agilidade',
-      logo: '🧪'
+      name: 'Chronos - Clínica de Imagem',
+      description: 'Centro de diagnóstico por imagem com tecnologia avançada',
+      logo: '🧪',
+      details: {
+        services: ['Ressonância magnética', 'Tomografia', 'Ultrassom', 'Raio-X digital'],
+        discount: '15% de desconto em exames de imagem'
+      }
     },
     {
       id: 5,
-      name: 'Fisio Prime',
-      description: 'Fisioterapia e reabilitação especializada',
-      logo: '🏃‍♂️'
+      name: 'Dentista - Clínica Saúde Alterosa',
+      description: 'Odontologia completa para toda família',
+      logo: clinicaSaudeAlterosa,
+      details: {
+        address: 'Av. Campos de Ourique, 1216 - Jardim Alterosa, Betim',
+        phone: '(31) 9 9154-2560',
+       discount: '10% a 15% de desconto'
+      }
     },
     {
       id: 6,
-      name: 'Dental Care',
-      description: 'Odontologia completa para toda família',
-      logo: '🦷'
+      name: 'Laboratório - Clínica Saúde Alterosa',
+      description: 'Exames laboratoriais com precisão e agilidade',
+      logo: clinicaSaudeAlterosa
     }
   ];
 
