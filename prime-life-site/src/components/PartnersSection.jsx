@@ -53,9 +53,9 @@ const PartnersSection = () => {
   const additionalPartners = [
     {
       id: 4,
-      name: 'Chronos - Clínica de Imagem',
-      description: 'Centro de diagnóstico por imagem com tecnologia avançada',
-      logo: '🧪',
+      name: 'Em breve!',
+      description: 'Em breve!',
+      logo: '⌛',
       details: {
         services: ['Ressonância magnética', 'Tomografia', 'Ultrassom', 'Raio-X digital'],
         discount: '15% de desconto em exames de imagem'
