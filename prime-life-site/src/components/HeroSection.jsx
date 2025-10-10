@@ -21,7 +21,7 @@ const HeroSection = () => {
             </h1>
             <p className="text-lg text-gray-600 leading-relaxed">
               Os melhores descontos conectando você à saúde que merece
-              <span className="text-pink-600">♥</span>
+              <span className="text-pink-600"> ♥</span>
             </p>
             <div className="pt-4">
               <Button
