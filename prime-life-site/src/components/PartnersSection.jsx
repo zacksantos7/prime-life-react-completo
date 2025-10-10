@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import Modal from './Modal';
+import clinicaSaudeAlterosa from '../assets/img/clinica-saude-alterosa.png';
+import clinicaCdi from '../assets/img/clinica-cdi.png';
+import clinicaReinaldo from '../assets/img/clinica-reinaldo.png';
 
 const PartnersSection = () => {
   const [showMore, setShowMore] = useState(false);
@@ -11,9 +14,9 @@ const PartnersSection = () => {
   const partners = [
     {
       id: 1,
-      name: 'Clínica Saúde Alemana',
+      name: 'Clínica Saúde Alterosa',
       description: 'Clínica especializada em medicina preventiva e diagnóstica',
-      logo: '🏥',
+      logo: clinicaSaudeAlterosa,
       details: {
         address: 'Rua das Flores, 123 - São Paulo, SP',
         phone: '(11) 3456-7890',
@@ -25,7 +28,7 @@ const PartnersSection = () => {
       id: 2,
       name: 'CDI - Clínica de Imagem',
       description: 'Centro de diagnóstico por imagem com tecnologia avançada',
-      logo: '🔬',
+      logo: clinicaCdi,
       details: {
         address: 'Av. Paulista, 456 - São Paulo, SP',
         phone: '(11) 2345-6789',
@@ -37,7 +40,7 @@ const PartnersSection = () => {
       id: 3,
       name: 'Dr. Ronaldo Caran',
       description: 'Cardiologia Interativa',
-      logo: '❤️',
+      logo: clinicaReinaldo,
       details: {
         address: 'Rua do Coração, 789 - São Paulo, SP',
         phone: '(11) 1234-5678',
@@ -97,7 +100,15 @@ const PartnersSection = () => {
               onClick={() => openPartnerModal(partner)}
             >
               <CardContent className="p-6 text-center">
-                <div className="text-4xl mb-4">{partner.logo}</div>
+                {typeof partner.logo === 'string' && partner.logo.startsWith('data:') === false && !partner.logo.includes('.png') && !partner.logo.includes('.jpg') && !partner.logo.includes('.jpeg') && !partner.logo.includes('.webp') ? (
+                  <div className="text-4xl mb-4">{partner.logo}</div>
+                ) : (
+                  <img
+                    src={partner.logo}
+                    alt={partner.name}
+                    className="w-40 h-40 mx-auto mb-4 object-contain"
+                  />
+                )}
                 <Button
                   variant="default"
                   className="bg-pink-600 hover:bg-pink-700 text-white mb-4 rounded-full pointer-events-none"
@@ -131,7 +142,15 @@ const PartnersSection = () => {
         {selectedPartner && (
           <div className="space-y-4">
             <div className="text-center mb-4">
-              <div className="text-6xl mb-2">{selectedPartner.logo}</div>
+              {typeof selectedPartner.logo === 'string' && selectedPartner.logo.startsWith('data:') === false && !selectedPartner.logo.includes('.png') && !selectedPartner.logo.includes('.jpg') && !selectedPartner.logo.includes('.jpeg') && !selectedPartner.logo.includes('.webp') ? (
+                <div className="text-6xl mb-2">{selectedPartner.logo}</div>
+              ) : (
+                <img
+                  src={selectedPartner.logo}
+                  alt={selectedPartner.name}
+                  className="w-32 h-32 mx-auto mb-4 object-contain"
+                />
+              )}
             </div>
             
             {selectedPartner.details && (
