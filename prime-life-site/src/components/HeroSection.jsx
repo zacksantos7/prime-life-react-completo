@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
+import imagemInicio from '../assets/img/imagem-inicio.png';
 
 const HeroSection = () => {
   const scrollToContact = () => {
@@ -34,23 +35,23 @@ const HeroSection = () => {
           </div>
 
           {/* Hero Image */}
-          <div className="relative">
+          <div className="relative flex items-center justify-center">
             <div className="relative z-10">
-              {/* Placeholder for professional woman image */}
-              <div className="w-full h-96 bg-gradient-to-br from-pink-100 to-pink-200 rounded-2xl flex items-center justify-center">
-                <div className="text-center">
-                  <div className="w-32 h-32 bg-pink-600 rounded-full mx-auto mb-4 flex items-center justify-center">
-                    <span className="text-white text-4xl font-bold">P</span>
-                  </div>
-                  <p className="text-pink-700 font-medium">Prime Life</p>
+              <div className="text-center">
+                <div className="w-90 h-110 mx-auto mb-4 flex items-center justify-center transition-all duration-300">
+                  <img
+                    src={imagemInicio}
+                    alt="Imagem de início"
+                    className="w-full h-full object-contain rounded-2xl drop-shadow-xl"
+                  />
                 </div>
               </div>
             </div>
-            
-            {/* Decorative elements */}
-            <div className="absolute -top-4 -right-4 w-24 h-24 bg-pink-500 rounded-full opacity-20 animate-pulse"></div>
-            <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-pink-400 rounded-full opacity-15 animate-pulse delay-1000"></div>
-            <div className="absolute top-1/2 -right-8 w-16 h-16 bg-pink-600 rounded-full opacity-25 animate-bounce delay-500"></div>
+
+            {/* Decorative elements (bolinhas animadas) */}
+            <div className="absolute top-4 right-10 w-20 h-20 bg-pink-500 rounded-full opacity-30 animate-pulse"></div>
+            <div className="absolute bottom-0 left-8 w-28 h-28 bg-pink-400 rounded-full opacity-20 animate-pulse delay-1000"></div>
+            <div className="absolute top-1/2 right-0 w-14 h-14 bg-pink-600 rounded-full opacity-25 animate-bounce delay-500"></div>
           </div>
         </div>
       </div>
