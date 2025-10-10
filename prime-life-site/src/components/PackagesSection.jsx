@@ -8,45 +8,49 @@ const PackagesSection = () => {
       id: 1,
       name: 'Básico',
       specifications: [
-        'Especificação 1',
-        'Especificação 2',
-        'Especificação 3',
-        'Especificação 4'
+        'Individual',
+        'Descontos em consultas e exames',
+        'Clube de benefícios',
+        'Acesso ao clube de benefícios',
+        'Mais de 20 especialidades para você aproveitar!'
       ],
-      price: 'R$ 99,90'
+      price: 'R$ 59,90'
     },
     {
       id: 2,
-      name: 'Premium',
+      name: 'Intermediário',
       specifications: [
-        'Especificação 1',
-        'Especificação 2',
-        'Especificação 3',
-        'Especificação 4'
+        '1 Titular + 3 dependentes',
+        'Descontos em consultas e exames',
+        'Clube de benefícios',
+        'Acesso ao clube de benefícios',
+        'Mais de 20 especialidades para você aproveitar!'
       ],
-      price: 'R$ 199,90'
+      price: 'R$ 69,90'
     },
     {
       id: 3,
-      name: 'Família',
+      name: 'Premium',
       specifications: [
-        'Especificação 1',
-        'Especificação 2',
-        'Especificação 3',
-        'Especificação 4'
+        '1 Titular + 4 dependentes',
+        'Descontos em consultas e exames',
+        'Clube de benefícios',
+        'Acesso ao clube de benefícios',
+        'Mais de 20 especialidades para você aproveitar!'
       ],
-      price: 'R$ 299,90'
+      price: 'R$ 89,90'
     },
     {
       id: 4,
       name: 'Empresarial',
       specifications: [
-        'Especificação 1',
-        'Especificação 2',
-        'Especificação 3',
-        'Especificação 4'
+        'Empresas/Micro empresas com até 500 colaboradores',
+        'Descontos em consultas e exames',
+        'Clube de benefícios',
+        'Acesso ao clube de benefícios',
+        'Mais de 20 especialidades para você e seus colaboradores aproveitarem!'
       ],
-      price: 'R$ 499,90'
+      price: 'Em breve!'
     }
   ];
 
