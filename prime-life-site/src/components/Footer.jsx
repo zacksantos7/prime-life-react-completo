@@ -11,7 +11,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-gradient-to-r from-pink-500 to-pink-600 py-12">
+    <footer className="prime-gradient py-16 lg:py-24">
       <div className="container mx-auto px-4">
         <div className="text-center">
           <h3 className="text-white text-xl lg:text-2xl font-bold mb-6">

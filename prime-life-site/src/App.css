@@ -121,7 +121,7 @@
 
 /* Custom Prime Life Styles */
 .prime-gradient {
-  background: linear-gradient(135deg, #c90954 0%, #4b0122 100%);
+  background: linear-gradient(135deg, #c90954 60%, #4b0122 100%);
 }
 
 .prime-text-gradient {

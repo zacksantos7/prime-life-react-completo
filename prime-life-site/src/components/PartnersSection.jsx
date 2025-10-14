@@ -69,7 +69,7 @@ const PartnersSection = () => {
       details: {
         address: 'Av. Campos de Ourique, 1216 - Jardim Alterosa, Betim',
         phone: '(31) 9 9154-2560',
-       discount: '10% a 15% de desconto'
+        discount: '10% a 15% de desconto'
       }
     },
     {
@@ -93,23 +93,21 @@ const PartnersSection = () => {
   };
 
   return (
-    <section id="parceiros" className="bg-gradient-to-br from-pink-500 to-pink-600 py-16 lg:py-24">
+    <section id="parceiros" className="prime-gradient py-16 lg:py-24 text-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-            Parceiros
-          </h2>
+          <h2 className="text-3xl lg:text-4xl font-bold mb-4">Parceiros</h2>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
           {displayedPartners.map((partner) => (
-            <Card 
-              key={partner.id} 
-              className="bg-white hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 cursor-pointer"
+            <Card
+              key={partner.id}
+              className="bg-card text-card-foreground card-hover cursor-pointer"
               onClick={() => openPartnerModal(partner)}
             >
               <CardContent className="p-6 text-center">
-                {typeof partner.logo === 'string' && partner.logo.startsWith('data:') === false && !partner.logo.includes('.png') && !partner.logo.includes('.jpg') && !partner.logo.includes('.jpeg') && !partner.logo.includes('.webp') ? (
+                {typeof partner.logo === 'string' && !partner.logo.includes('.png') ? (
                   <div className="text-4xl mb-4">{partner.logo}</div>
                 ) : (
                   <img
@@ -120,11 +118,11 @@ const PartnersSection = () => {
                 )}
                 <Button
                   variant="default"
-                  className="bg-pink-600 hover:bg-pink-700 text-white mb-4 rounded-full pointer-events-none"
+                  className="btn-prime text-white mb-4 rounded-full pointer-events-none"
                 >
                   {partner.name}
                 </Button>
-                <p className="text-gray-600 text-sm">{partner.description}</p>
+                <p className="text-muted-foreground text-sm">{partner.description}</p>
               </CardContent>
             </Card>
           ))}
@@ -134,7 +132,7 @@ const PartnersSection = () => {
           <Button
             onClick={() => setShowMore(!showMore)}
             variant="outline"
-            className="bg-white text-pink-600 border-white hover:bg-pink-50 px-8 py-2 rounded-full"
+            className="bg-background text-primary border border-border hover:bg-accent px-8 py-2 rounded-full transition-all duration-300"
           >
             {showMore ? 'Ver menos' : 'Ver mais'}
           </Button>
@@ -149,9 +147,9 @@ const PartnersSection = () => {
         description={selectedPartner?.description}
       >
         {selectedPartner && (
-          <div className="space-y-4">
+          <div className="space-y-4 text-foreground">
             <div className="text-center mb-4">
-              {typeof selectedPartner.logo === 'string' && selectedPartner.logo.startsWith('data:') === false && !selectedPartner.logo.includes('.png') && !selectedPartner.logo.includes('.jpg') && !selectedPartner.logo.includes('.jpeg') && !selectedPartner.logo.includes('.webp') ? (
+              {typeof selectedPartner.logo === 'string' && !selectedPartner.logo.includes('.png') ? (
                 <div className="text-6xl mb-2">{selectedPartner.logo}</div>
               ) : (
                 <img
@@ -161,41 +159,41 @@ const PartnersSection = () => {
                 />
               )}
             </div>
-            
+
             {selectedPartner.details && (
               <>
                 <div>
-                  <h4 className="font-semibold text-gray-800 mb-2">Endereço:</h4>
-                  <p className="text-gray-600">{selectedPartner.details.address}</p>
+                  <h4 className="font-semibold text-foreground mb-2">Endereço:</h4>
+                  <p className="text-muted-foreground">{selectedPartner.details.address}</p>
                 </div>
-                
+
                 <div>
-                  <h4 className="font-semibold text-gray-800 mb-2">Telefone:</h4>
-                  <p className="text-gray-600">{selectedPartner.details.phone}</p>
+                  <h4 className="font-semibold text-foreground mb-2">Telefone:</h4>
+                  <p className="text-muted-foreground">{selectedPartner.details.phone}</p>
                 </div>
-                
+
                 <div>
-                  <h4 className="font-semibold text-gray-800 mb-2">Serviços:</h4>
-                  <ul className="list-disc list-inside text-gray-600 space-y-1">
-                    {selectedPartner.details.services.map((service, index) => (
+                  <h4 className="font-semibold text-foreground mb-2">Serviços:</h4>
+                  <ul className="list-disc list-inside text-muted-foreground space-y-1">
+                    {selectedPartner.details.services?.map((service, index) => (
                       <li key={index}>{service}</li>
                     ))}
                   </ul>
                 </div>
-                
-                <div className="bg-pink-50 p-4 rounded-lg">
-                  <h4 className="font-semibold text-pink-800 mb-2">Desconto Prime Life:</h4>
-                  <p className="text-pink-700">{selectedPartner.details.discount}</p>
+
+                <div className="bg-accent p-4 rounded-lg">
+                  <h4 className="font-semibold text-primary mb-2">Desconto Prime Life:</h4>
+                  <p className="text-primary">{selectedPartner.details.discount}</p>
                 </div>
-                
+
                 <div className="text-center pt-4">
                   <Button
                     onClick={() => {
                       const message = `Olá! Sou associado da Prime Life e gostaria de agendar um atendimento em ${selectedPartner.name}.`;
-                      const whatsappUrl = `https://wa.me/5511999999999?text=${encodeURIComponent(message)}`;
+                      const whatsappUrl = `https://wa.me/5531990623159?text=${encodeURIComponent(message)}`;
                       window.open(whatsappUrl, '_blank');
                     }}
-                    className="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-full"
+                    className="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-full transition-all"
                   >
                     Agendar via WhatsApp
                   </Button>
