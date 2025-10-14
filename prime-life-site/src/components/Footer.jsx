@@ -37,7 +37,7 @@ const Footer = () => {
               <span className="text-white font-bold text-xl">Prime Life</span>
             </div>
             <p className="text-pink-100 text-sm">
-              © 2024 Prime Life. Todos os direitos reservados.
+              ©2025 Prime Life. Todos os direitos reservados.
             </p>
             <p className="text-pink-200 text-xs mt-2">
               Conectando você à saúde que merece ♥
